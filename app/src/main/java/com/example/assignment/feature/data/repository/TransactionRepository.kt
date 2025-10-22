@@ -2,9 +2,9 @@ package com.example.assignment.feature.data.repository
 
 import com.example.assignment.R
 import android.content.Context
-import com.example.assignment.feature.data.model.MidGroup
-import com.example.assignment.feature.data.model.TidGroup
 import com.example.assignment.feature.data.model.TransactionList
+import com.example.assignment.feature.domain.model.MidGroup
+import com.example.assignment.feature.domain.model.TidGroup
 import com.google.gson.Gson
 
 class TransactionRepository(private val context: Context) {
