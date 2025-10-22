@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="ledger_list">Ledger List</string>
+    <string name="mid">Mid :</string>
+    <string name="tid">Tid:</string>
+    <string name="narration">Narration :</string>
+    <string name="amount">Amount :</string>
+</resources>
