@@ -1,4 +1,4 @@
-package com.example.assignment.feature.presentation.adapter
+package com.example.assignment.feature.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment.databinding.ItemTidBinding
-import com.example.assignment.feature.data.model.TidGroup
+import com.example.assignment.feature.domain.model.TidGroup
 
 class TidAdapter(private val tidGroups: List<TidGroup>) :
     RecyclerView.Adapter<TidAdapter.TidViewHolder>() {
@@ -26,8 +26,7 @@ class TidAdapter(private val tidGroups: List<TidGroup>) :
         val group = tidGroups[position]
         holder.binding.tvTid.text = "TID: ${group.tid}"
 
-        holder.binding.transactionRecycler.layoutManager =
-            LinearLayoutManager(holder.itemView.context)
+        holder.binding.transactionRecycler.layoutManager = LinearLayoutManager(holder.itemView.context)
         holder.binding.transactionRecycler.adapter = TransactionAdapter(group.transactions)
 
         holder.binding.ivArrow.rotation = if (holder.isExpanded) 180f else 0f

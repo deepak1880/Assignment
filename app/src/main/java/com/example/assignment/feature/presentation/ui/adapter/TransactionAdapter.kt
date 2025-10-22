@@ -1,10 +1,10 @@
-package com.example.assignment.feature.presentation.adapter
+package com.example.assignment.feature.presentation.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment.databinding.ItemTransactionBinding
-import com.example.assignment.feature.data.model.Transaction
+import com.example.assignment.feature.domain.model.Transaction
 
 class TransactionAdapter(private val list: List<Transaction>) :
     RecyclerView.Adapter<TransactionAdapter.TransactionViewHolder>() {

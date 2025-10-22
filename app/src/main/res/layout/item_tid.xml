@@ -19,8 +19,8 @@
 
     <ImageView
         android:id="@+id/ivArrow"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/dp_24"
+        android:layout_height="@dimen/dp_24"
         android:src="@drawable/arrow_upward"
         app:layout_constraintBottom_toBottomOf="@id/tvTid"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,4 +1,4 @@
-package com.example.assignment.feature.presentation.adapter
+package com.example.assignment.feature.presentation.ui.adapter
 
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assignment.databinding.ItemMidBinding
-import com.example.assignment.feature.data.model.MidGroup
+import com.example.assignment.feature.domain.model.MidGroup
 
 class MidAdapter(private val midGroups: List<MidGroup>) :
     RecyclerView.Adapter<MidAdapter.MidViewHolder>() {
@@ -28,7 +28,6 @@ class MidAdapter(private val midGroups: List<MidGroup>) :
         val group = midGroups[position]
         holder.binding.tvMid.text = "MID: ${group.mid}"
         Log.e("group.Mid", "onBindViewHolder: $group")
-
 
         holder.binding.rvTid.layoutManager = LinearLayoutManager(holder.itemView.context)
         holder.binding.rvTid.adapter = TidAdapter(group.tidGroups)

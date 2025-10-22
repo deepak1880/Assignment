@@ -1,8 +1,8 @@
 package com.example.assignment
 
-import com.example.assignment.feature.data.model.MidGroup
-import com.example.assignment.feature.data.model.TidGroup
-import com.example.assignment.feature.data.model.Transaction
+import com.example.assignment.feature.domain.model.MidGroup
+import com.example.assignment.feature.domain.model.TidGroup
+import com.example.assignment.feature.domain.model.Transaction
 import org.junit.Test
 
 import org.junit.Assert.*

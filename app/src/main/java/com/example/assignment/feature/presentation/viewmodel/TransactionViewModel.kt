@@ -4,19 +4,23 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.assignment.feature.data.model.MidGroup
-import com.example.assignment.feature.data.repository.TransactionRepository
+import com.example.assignment.feature.domain.model.MidGroup
+import com.example.assignment.feature.domain.usecase.GetTransactionsUseCase
 import kotlinx.coroutines.launch
 
-class TransactionViewModel(private val repository: TransactionRepository) : ViewModel() {
-
+class TransactionViewModel(private val getTransactionsUseCase: GetTransactionsUseCase) :
+    ViewModel() {
     private val _midGroups = MutableLiveData<List<MidGroup>>()
     val midGroups: LiveData<List<MidGroup>> = _midGroups
 
     fun loadTransactions() {
         viewModelScope.launch {
-            val grouped = repository.getTransactions()
-            _midGroups.value = grouped
+            try {
+                val grouped = getTransactionsUseCase()
+                _midGroups.value = grouped
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 }

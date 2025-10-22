@@ -1,4 +1,4 @@
-package com.example.assignment.feature.data.model
+package com.example.assignment.feature.domain.model
 
 data class MidGroup(
     val mid: Int,
